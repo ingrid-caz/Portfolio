@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Ingrid CAZENAVE</h1>
+    <nav>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="projet">
+          <h1>Projects</h1>
+
+      <div class="scroll-section" id="scrollZone">
+        <button class="scroll-button" style="background-image: url(img/glacier.png);">Environmental amnesia</button>
+        <button class="scroll-button" style="background-image: url(img/oeil2.png);">"Oeil des rêves"</button>
+        <button class="scroll-button" style="background-image: url(img/rita2.png);">Amnesty internationnal</button>
+        <button class="scroll-button" style="background-image: url(img/vizualiser\ \(1\).png);">Visualizer</button>
+        <button class="scroll-button" style="background-image: url(img/vr\ \(3\).png);">Blossom</button>
+        <button class="scroll-button" style="background-image: url(img/glacier1.png);">Drawings</button>
+        <button class="scroll-button" style="background-image: url('images/img7.jpg');"></button>
+        <button class="scroll-button" style="background-image: url(img/stopmotion2.png);">StopMotion</button>
+        <button class="scroll-button" style="background-image: url(img/stopmotion2.png);">StopMotion</button>
+        <button class="scroll-button" style="background-image: url('images/img9.jpg');"></button>
+      </div>
+      <script>
+        const scrollZone = document.getElementById('scrollZone');
+        let isMouseInside = false;
+
+        scrollZone.addEventListener('mouseenter', () => {
+          isMouseInside = true;
+        });
+
+        scrollZone.addEventListener('mouseleave', () => {
+          isMouseInside = false;
+        });
+
+        scrollZone.addEventListener('mousemove', (e) => {
+          if (!isMouseInside) return;
+
+          const bounds = scrollZone.getBoundingClientRect();
+          const mouseX = e.clientX - bounds.left;
+          const width = bounds.width;
+
+          // Calculer la position relative (0 = gauche, 1 = droite)
+          const percent = mouseX / width;
+
+          // Vitesse de défilement max
+          const maxSpeed = 55; // pixels par mouvement
+
+          // Calcul du scroll
+          const scrollAmount = (percent - 0.5) * 2 * maxSpeed; // -maxSpeed à +maxSpeed
+          scrollZone.scrollLeft += scrollAmount;
+        });
+
+      </script>
+    </section>
+
+    <section class="video-section">
+      <!-- Vidéo de fond -->
+      <video autoplay muted loop playsinline>
+        <source src="vidéo/Composition 4.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas les vidéos HTML5.
+      </video>
+
+      <!-- Overlay sombre -->
+      <div class="video-overlay"></div>
+
+      <!-- Contenu texte -->
+      <div class="text-content">
+        <a href="https://exemple.com" target="_blank" rel="noopener noreferrer"
+          style="color: white; text-decoration: none;">
+          <h1>TouchDesigner</h1>
+          <h1>Experimentations</h1>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Ingrid Cazenave</p>
+  </footer>
+</body>
+
+</html>
