@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: 'MaPolice';
+    src: url('font/Interlope-Regular.woff2') format('woff2'),
+        url('font/Interlope-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps de page */
+body {
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #4738e5;
+}
+
+/* En-tête */
+header {
+    background-color: #4738e5;
+    color: #fff;
+    padding: 20px;
+    text-align: right;
+}
+
+header h1 {
+    padding: 0px;
+    margin-bottom: 10px;
+    font-size: 45px;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.contenu {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.texte {
+    padding: 20px;
+    flex: 1;
+    font-size: 18px;
+    line-height: 1.6;
+    width: 50%;
+}
+
+.texte p {
+    width: 600px;
+    padding-bottom: 10px;
+}
+
+.image {
+    width: 50%;
+    padding: 20px;
+    gap: 5px;
+}
+
+
+.image img {
+    width: 100%;
+    height: auto;
+    align-items: center;
+}
+
+.image video {
+    width: 100%;
+    height: auto
+}
+
+.image p {
+    padding-bottom: 20px;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(111, 115, 120, 0.326);
+    /* assombrit la vidéo pour que le texte soit lisible */
+    z-index: 2;
+}
+
+
+/* Pied de page */
+footer {
+    height: 40px;
+    background-color: #4738e5;
+    color: white;
+    text-align: center;
+}
