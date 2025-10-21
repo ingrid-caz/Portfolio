@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+  font-family: 'MaPolice';
+  src: url('font/Interlope-Regular.woff2') format('woff2'),
+    url('font/Interlope-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Reset de base */
 * {
   margin: 0;
@@ -7,36 +17,26 @@
 
 /* Corps de page */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.6;
-  background-color: #7c8b9d;
-  color: #ffffff;
-}
-
-/* Contenu principal */
-main {
-  padding: 0px;
-  max-width: 100%;
-  margin: 0px;
-  background-color: #7c8b9d;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  color: #4738e5;
 }
 
 /* En-tête */
 header {
-  background-color: #ffffff47;
+  background-color: #4738e5;
   color: #fff;
   padding: 20px;
   text-align: right;
 }
 
 header h1 {
+  padding: 0px;
   margin-bottom: 10px;
+  font-size: 45px;
 }
 
-header:hover {
-  background-color: #ffffff84;
-}
 
 nav ul {
   list-style: none;
@@ -54,6 +54,40 @@ nav a:hover {
   text-decoration: underline;
 }
 
+.grille {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 colonnes */
+  grid-template-rows: repeat(3, 400px);
+  /* 3 lignes de 100px */
+  gap: 0px;
+  /* espace entre les cellules */
+  width: 100%;
+}
+
+.cellule {
+  border: 1px solid #4738e5;
+  color: #4738e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  background-color: #fff;
+  background-size: 0%;
+}
+
+.cellule:hover {
+  border: 0px;
+  color: rgba(71, 56, 229, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 0px;
+  background-size: cover;
+  background-position: center;
+}
+
 .projet h1 {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -63,7 +97,7 @@ nav a:hover {
 .scroll-section {
   display: flex;
   overflow-x: auto;
-  gap: 10px;
+  gap: 15px;
   padding: 10px;
   width: 100%;
   /* largeur visible pour 3 boutons */
@@ -102,6 +136,7 @@ nav a:hover {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  margin: 10px;
 }
 
 .video-section video {
@@ -132,18 +167,36 @@ nav a:hover {
   padding-left: 50px;
   transform: translateY(-50%);
   z-index: 3;
-  color: #fff;
-  max-width: 500px;
+  color: #ffffffbe;
+  cursor: pointer;
 }
 
 .text-content h1 {
   margin-bottom: 0.5em;
 }
 
+.text-content h1:hover {
+  transform: scale(1.02);
+  color: #fff;
+}
+
+.video {
+  display: none;
+}
+
+.video.active {
+  display: block;
+}
+
+h1 {
+  padding-top: 20px;
+  padding-left: 50px;
+}
 
 /* Pied de page */
 footer {
-  background-color: #7c8b9d;
+  height: 40px;
+  background-color: #4738e5;
   color: white;
   text-align: center;
 }
