@@ -63,23 +63,7 @@ nav a:hover {
   width: 100%;
 }
 
-@media (max-width: 1000px) {
-  .grille {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
 
-@media (max-width: 700px) {
-  .grille {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 450px) {
-  .grille {
-    grid-template-columns: 1fr;
-  }
-}
 
 .cellule {
   border: 1px solid #4738e5;
@@ -104,6 +88,29 @@ nav a:hover {
   background-position: center;
 }
 
+@media (max-width: 1000px) {
+  .grille {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 300px);
+    height: 1200px;
+  }
+}
+
+@media (max-width: 700px) {
+  .grille {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 300px);
+    height: 1500px;
+  }
+}
+
+@media (max-width: 450px) {
+  .grille {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 200px);
+    height: 1800px;
+  }
+}
 
 h1 {
   padding-top: 20px;
