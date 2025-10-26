@@ -2,7 +2,7 @@
 
 @media (max-width: 768px) {
   body {
-    font-size: 11px;
+    font-size: 13px;
   }
 }
 
@@ -61,6 +61,12 @@ nav a:hover {
     flex-wrap: wrap;
 }
 
+@media (max-width: 768px) {
+  .contenu {
+    min-height: 63vh;
+  }
+}
+
 .texte {
     flex: 1 1 50%;
     padding: 20px;
@@ -76,7 +82,7 @@ nav a:hover {
 
 @media (max-width: 768px) {
   .texte {
-    font-size: 11px;
+    font-size: 13px;
   }
 }
 
@@ -103,7 +109,7 @@ nav a:hover {
 
 @media (max-width: 768px) {
   .image {
-    font-size: 11px;
+    font-size: 13px;
 
   }
 }
