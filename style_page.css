@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-@font-face {
-    font-family: 'MaPolice';
-    src: url('font/Interlope-Regular.woff2') format('woff2'),
-        url('font/Interlope-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+@media (max-width: 768px) {
+  body {
+    font-size: 11px;
+  }
 }
 
 /* Reset de base */
@@ -60,27 +58,33 @@ nav a:hover {
     justify-content: flex-start;
     width: 100%;
     min-height: 100vh;
+    flex-wrap: wrap;
 }
 
 .texte {
+    flex: 1 1 50%;
     padding: 20px;
-    flex: 1;
     font-size: 18px;
     line-height: 1.6;
-    width: 50%;
 }
 
+
 .texte p {
-    width: 600px;
+    width: 80%;
     padding-bottom: 10px;
 }
 
+@media (max-width: 768px) {
+  .texte {
+    font-size: 11px;
+  }
+}
+
 .image {
-    width: 50%;
+    flex: 1 1 50%;
     padding: 20px;
     gap: 5px;
 }
-
 
 .image img {
     width: 100%;
@@ -97,6 +101,13 @@ nav a:hover {
     padding-bottom: 20px;
 }
 
+@media (max-width: 768px) {
+  .image {
+    font-size: 11px;
+
+  }
+}
+
 .video-overlay {
     position: absolute;
     top: 0;
@@ -108,6 +119,12 @@ nav a:hover {
     z-index: 2;
 }
 
+@media (max-width: 700px) {
+      .texte,
+      .image {
+        flex: 1 1 100%;
+      }
+    }
 
 /* Pied de page */
 footer {
